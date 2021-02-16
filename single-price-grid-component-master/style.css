@@ -1,0 +1,122 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    font-weight: 300;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    line-height: 1.3;
+    font-family: "Karla", sans-serif;
+    background-color: var(--light-gray);
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    --white: hsl(0, 100%, 100%);
+    --cyan: hsl(179, 62%, 43%);
+    --light-cyan: hsl(179, 62%, 60%);
+    --bright-yellow: hsl(72, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+.main__container {
+    display: flex;
+    flex-direction: column;
+    width: 40em;
+}
+
+.info {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 10px 10px 0 0;
+}
+.info > .info--title {
+    color: var(--cyan);
+    font-weight: 700;
+}
+.info > .info--meta {
+    color: var(--bright-yellow);
+    margin: 20px 0 10px 0;
+}
+.info > .info--text {
+    color: var(--grayish-blue);
+    line-height: 1.9em;
+}
+
+.info__subsection {
+    display: flex;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 23.4375em) {
+    body {
+        height: 100%;
+    }
+    .info__subsection {
+        flex-direction: column;
+    }
+    .main__container {
+        width: 20em;
+        margin: 5rem 0 5rem 0;
+    }
+}
+
+.info__subsection > div {
+    flex: 1 0 50%;
+}
+
+.subscription {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cyan);
+    color: var(--white);
+    padding: 30px;
+}
+.subscription > .subscription--price {
+    display: flex;
+    align-items: center;
+    padding: 15px 0 10px 0;
+}
+.subscription > .subscription--price > :first-child {
+    font-weight: 700;
+    font-size: 2.6rem;
+    margin-right: 20px;
+}
+.subscription > .subscription--price > :last-child {
+    color: var(--light-cyan);
+}
+.subscription > .subscription--signup {
+    background-color: var(--bright-yellow);
+    text-align: center;
+    padding: 10px 0;
+    margin: 30px 0 0 0;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+}
+.about {
+    padding: 30px;
+    background-color: var(--light-cyan);
+    color: var(--white);
+}
+.about > .about--text {
+    list-style: none;
+    padding: 15px 0 0 0;
+    color: var(--light-gray);
+}
+.about > .about--text > li:not(:last-child){
+    margin: 0 0 3px 0;
+}
