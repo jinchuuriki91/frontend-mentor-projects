@@ -1,0 +1,149 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+    font-weight: 400;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --white: hsl(0, 100%, 100%);
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+}
+
+body {
+    background-image: url(./images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+    background-color: var(--violet);
+    height: 100vh;
+    font-family: "Open Sans", "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        background-image: url("./images/bg-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0 0;
+    }
+
+    .main__section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .main--info {
+        padding: 0 !important;
+    }
+
+    .main--title {
+        font-size: 1.7rem !important;
+    }
+
+    .main--logo > img {
+        width: 150px !important;
+    }
+
+    .main__container > .main__footer {
+        justify-content: center !important;
+    }
+}
+
+.main__container {
+    padding: 5vh 5vw;
+    color: var(--white);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main--logo > img {
+    width: 16rem;
+    height: auto;
+}
+
+.main__section {
+    display: flex;
+    font-family: "Open Sans", sans-serif;
+    padding: 9vh 0 0;
+}
+
+.main__section > .main--mockup {
+    flex: 0 0 46vw;
+}
+
+.main__section > .main--mockup > img {
+    width: 100%;
+}
+
+.main__section > .main--info {
+    padding: 0 0 0 5vw;
+}
+
+.main__section > .main--info > .main--title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 3rem 0 0;
+}
+
+.main__section > .main--info > .main--about {
+    line-height: 1.5rem;
+    margin: 1.5rem 0 2.5rem 0;
+}
+
+.main__section > .main--info > .main--about > p:not(:last-child) {
+    margin: 0 0 0.3rem 0;
+}
+
+.main__section > .main--info > .main--register--btn {
+    font-family: "Poppins", sans-serif;
+    padding: 0.8rem 3.5rem;
+    border-radius: 50px;
+    background-color: var(--white);
+    margin: 0 auto;
+    color: var(--violet);
+    cursor: pointer;
+    margin: 4rem 0 0 0;
+}
+
+.main__section > .main--info > .main--register--btn:hover {
+    color: var(--white);
+    background-color: var(--soft-magenta);
+}
+
+.main__container > .main__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2rem 0 0;
+}
+
+.main__container > .main__footer > div {
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    width: 1.9rem;
+    height: 1.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__container > .main__footer > div:hover {
+    color: var(--soft-magenta);
+    border: 1px solid var(--soft-magenta);
+    cursor: pointer;
+}
+
+.main__container > .main__footer > div:not(:last-child) {
+    margin: 0 1rem 0 0;
+}
